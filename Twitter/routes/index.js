@@ -6,7 +6,8 @@ let profileCtrl = require('../controllers/profiles')
 
 /* GET blank page. */
 router.get('/', function(req, res, next) {
-  res.redirect('/home');
+  // res.redirect('/home');
+  res.send("LOL")
 });
 
 // GET Home page
@@ -17,7 +18,9 @@ router.get('/explore', exploreCtrl.show);
 
 // GET profile  page
 router.get('/profile', profileCtrl.show);
-   // res.send("YO I'm /profile! welcome to profile!")
+
+// POST a post from home?
+router.post('/home', indexCtrl.create );
 
 
 
