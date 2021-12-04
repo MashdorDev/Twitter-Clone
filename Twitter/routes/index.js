@@ -6,8 +6,7 @@ let profileCtrl = require('../controllers/profiles')
 
 /* GET blank page. */
 router.get('/', function(req, res, next) {
-  // res.redirect('/home');
-  res.send("LOL")
+  res.redirect('/home');
 });
 
 // GET Home page

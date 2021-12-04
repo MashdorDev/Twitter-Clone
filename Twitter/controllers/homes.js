@@ -3,10 +3,10 @@ const Post = require('../models/post')
 
 function index(req, res){
   console.log("Hit function index");
-  Post.find({},function(err, res) {
+  Post.find({},function(err, post) {
       console.log("Hit function INSIDE index");
-    // res.render('index', { title: 'Twitter'});
-    res.send("home")
+     res.render('index', { title: 'Twitter', posts: post});
+
   } )
 }
 
