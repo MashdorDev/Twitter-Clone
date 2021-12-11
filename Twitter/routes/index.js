@@ -4,6 +4,7 @@ let indexCtrl = require('../controllers/homes');
 let exploreCtrl = require('../controllers/explores');
 let profileCtrl = require('../controllers/profiles');
 let postCtrl = require('../controllers/post');
+
 /* GET blank page. */
 router.get('/', function(req, res, next) {
   res.redirect('/home');

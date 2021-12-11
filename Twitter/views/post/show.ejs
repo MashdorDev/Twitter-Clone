@@ -13,8 +13,23 @@
 
 <%= post.textContent %>
 <form  action="<%= post.id %>?_method=DELETE" method="POST">
-<button type="submit" name="button">X</button>
+<button type="submit">X</button>
 </form>
 
+<form class="" action="/post/<%= post.id %>" method="POST">
+<input type="text" name="textContent" value="" placeholder="Tweet your reply">
+<button type="submit">Post</button>
+</form>
+
+<h1>Comments</h1>
+<% post.comments.forEach(function(m){ %>
+<br>
+User id - <%= m.id %>
+<br>
+<br> Said :
+<%= m.textContent %>
+<br>
+<% }) %>
+<%= post.comments.textContent %>
   </body>
 </html>

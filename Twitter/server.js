@@ -9,7 +9,7 @@ let methodOverride = require('method-override');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+var postRouter = require('./routes/post');
 var app = express();
 
 // view engine setup
@@ -25,6 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/post', postRouter);
 app.listen(3000, function(){
   console.log("listening on 3000, You Champ! 😎")
 })
