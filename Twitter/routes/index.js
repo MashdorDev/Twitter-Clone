@@ -22,6 +22,9 @@ router.get('/profile', profileCtrl.show);
 router.post('/home', indexCtrl.create );
 
 
+//Delete post -> 61b3e760841c5384dcb73c6c
+
+router.delete('/:id', indexCtrl.deletePost)
 
 
 module.exports = router;

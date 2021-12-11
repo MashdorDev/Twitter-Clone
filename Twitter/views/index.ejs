@@ -11,12 +11,16 @@
   <a href="/explore">Explore</a>  <br><br>
   <a href="/profile">Profile</a>  <br><br>
 <form class="" action="/home" method="POST">
-  <input type="text" name="userPost" value="" placeholder="What's happening?"> <button type="submit" name="button">Post</button>
+  <input type="text" name="textContent" value="" placeholder="What's happening?"> <button type="submit" name="button">Post</button>
 </form>
 
 
  <%  posts.forEach(function(p){  %>
-<h4>  <%= p %> </h4>
+<h4>  <%= p.textContent %>  <form  action="<%= p.id %>?_method=DELETE" method="POST">
+<button type="submit" name="button">X</button>
+</form>
+
+</form>  </h4>
 <% }); %>
 
 
