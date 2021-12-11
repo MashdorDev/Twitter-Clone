@@ -12,7 +12,7 @@ const commentSchema = new Schema({
 
 const postSchema = new Schema({
   textContent : String,
-    comments: [commentSchema]
+  comments: [commentSchema]
 },
 {
   timestamps:true
