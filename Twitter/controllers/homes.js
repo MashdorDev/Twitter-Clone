@@ -25,19 +25,8 @@ function deletePost(req,res){
 Post.findByIdAndDelete(req.params.id , function (err, docs) {
   res.redirect('/');
 })
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
 module.exports = {
    index,
    create,

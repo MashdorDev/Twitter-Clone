@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
-let indexCtrl = require('../controllers/homes')
-let exploreCtrl = require('../controllers/explores')
-let profileCtrl = require('../controllers/profiles')
-
+let indexCtrl = require('../controllers/homes');
+let exploreCtrl = require('../controllers/explores');
+let profileCtrl = require('../controllers/profiles');
+let postCtrl = require('../controllers/post');
 /* GET blank page. */
 router.get('/', function(req, res, next) {
   res.redirect('/home');
@@ -22,7 +22,10 @@ router.get('/profile', profileCtrl.show);
 router.post('/home', indexCtrl.create );
 
 
-//Delete post -> 61b3e760841c5384dcb73c6c
+router.get('/:id', postCtrl.show)
+
+
+//Delete post
 
 router.delete('/:id', indexCtrl.deletePost)
 

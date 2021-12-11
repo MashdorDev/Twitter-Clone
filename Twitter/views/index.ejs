@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+<%- include('partials/header.ejs') %>
   <body>
     <a href="/">ICON</a>
     <h1><%= title %></h1>
@@ -16,13 +11,15 @@
 
 
  <%  posts.forEach(function(p){  %>
+   <a href="<%= p.id %>">
 <h4>  <%= p.textContent %>  <form  action="<%= p.id %>?_method=DELETE" method="POST">
 <button type="submit" name="button">X</button>
 </form>
 
 </form>  </h4>
+</a>
 <% }); %>
 
 
   </body>
-</html>
+<%- include('partials/footer') %>
