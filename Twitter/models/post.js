@@ -1,22 +1,11 @@
+// TODO Import Mongoose
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+// TODO commentSchema
 
-const commentSchema = new Schema({
-  textContent : String,
-},{
-  timestamps:true
-}
-);
-
-
-const postSchema = new Schema({
-  textContent : String,
-  comments: [commentSchema]
-},
-{
-  timestamps:true
-});
+// TODO postSchema
 
 
 module.exports = mongoose.model('Post', postSchema);

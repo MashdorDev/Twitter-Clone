@@ -1,10 +1,13 @@
+// TODO add mongoose
 const mongoose = require('mongoose');
 
+// TODO add MongoDB URI
 mongoose.connect('mongodb://localhost/Twitter', {
   useNewUrlParser: true,
-  // useCreateIndex: true,
   useUnifiedTopology: true
 });
+
+// TODO add DB
 
 // shortcut to mongoose.connection object
 const db = mongoose.connection;
